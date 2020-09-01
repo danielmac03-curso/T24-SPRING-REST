@@ -18,6 +18,12 @@ public class EmpleadoController {
 		return empleadoServiceImpl.listarEmpleados();
 	}
 	
+	@GetMapping ("/empleados/trabajo/{trabajo}")
+	public List<Empleado> listarEmpleadosTrabajo(@PathVariable(name="trabajo") String trabajo){
+		return empleadoServiceImpl.listarEmpleadoTrabajo(trabajo);
+	}
+	
+	
 	@PostMapping("/empleados")
 	public Empleado salvarEmpleado(@RequestBody Empleado empleado) {
 		return empleadoServiceImpl.guardarEmpleado(empleado);

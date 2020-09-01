@@ -12,4 +12,5 @@ public interface IEmpleadoService {
 	public Empleado empleadoXID(long id);
 	public Empleado actualizarEmpleado(Empleado empleado);
 	public void eliminarEmpleado(long id);
+	public List<Empleado> listarEmpleadoTrabajo(String empleado);
 }

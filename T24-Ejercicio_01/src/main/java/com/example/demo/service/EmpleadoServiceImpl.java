@@ -40,5 +40,10 @@ public class EmpleadoServiceImpl implements IEmpleadoService{
 	public void eliminarEmpleado(long id) {
 		iEmpleadoDAO.deleteById(id);
 	}
+	
+	@Override
+	public List<Empleado> listarEmpleadoTrabajo(String trabajo) {
+		return iEmpleadoDAO.findByTrabajo(trabajo);
+	}
 
 }
