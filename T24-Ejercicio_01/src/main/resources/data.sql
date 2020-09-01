@@ -1,6 +1,15 @@
+DROP TABLE IF EXISTS empleado;
+
+CREATE TABLE empleado(
+    id int auto_increment PRIMARY KEY,
+    nombre varchar(250),
+    trabajo enum('Programador', 'Ventas', 'Administracion'),
+    salario float
+);
+
 INSERT INTO empleado (nombre, trabajo, salario) VALUES
-('Daniel', 'CEO', '3200'), 
-('Marta', 'CTO', '3000'), 
-('Laura', 'Programador', '1500'), 
-('Marc', 'Programador', '2200'), 
-('Marta', 'Programador', '1500');
+('Daniel', 'Programador', '2000.0'),
+('Marta', 'Administracion', '1700.0'),
+('Laura', 'Programador', '2000.0'),
+('Marc', 'Administracion', '1700.0'),
+('Marta', 'Ventas', '2200.0');

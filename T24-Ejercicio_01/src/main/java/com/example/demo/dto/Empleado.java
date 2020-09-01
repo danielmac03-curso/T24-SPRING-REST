@@ -33,7 +33,7 @@ public class Empleado {
 		this.id = id;
 		this.nombre = nombre;
 		this.trabajo = trabajo;
-		this.salario = salario;
+		this.salario = ponerSalario(trabajo, salario);
 	}
 
 	//Getters & Setters
@@ -59,6 +59,7 @@ public class Empleado {
 
 	public void setTrabajo(String trabajo) {
 		this.trabajo = trabajo;
+		this.salario = ponerSalario(trabajo, salario);
 	}
 
 	public Double getSalario() {
@@ -74,5 +75,21 @@ public class Empleado {
 	public String toString() {
 		return "Empleado [id=" + id + ", nombre=" + nombre + ", trabajo=" + trabajo + ", salario=" + salario + "]";
 	}
-	
+
+	public Double ponerSalario(String trabajo, Double salario) {
+		switch (trabajo) {
+			case "Programador":
+				salario = 2000.0;
+				break;
+			case "Ventas":
+				salario = 2200.0;
+				break;
+			case "Administracion":
+				salario = 1700.0;
+				break;		
+		}	
+			
+		return salario;
+	}
+		
 }
